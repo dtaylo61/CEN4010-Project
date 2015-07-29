@@ -1,5 +1,6 @@
 <?php
 
+
 function processImage()
 {
 	$target_in_dir = "uploads/";
@@ -76,6 +77,29 @@ function processImage()
 			echo "Sorry, there was an error uploading your file.";
 		}
 	}
+
+// Allow certain file formats
+/*if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+&& $imageFileType != "gif" ) {
+    echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+    $uploadOk = 0;
+}*/
+// Check if $uploadOk is set to 0 by an error
+if ($uploadOk == 0) {
+    echo "Sorry, your file was not uploaded.";
+// if everything is ok, try to upload file
+} else {
+    if (move_uploaded_file($_FILES["images"]["tmp_name"], $target_file)) {
+        echo "The file ". basename( $_FILES["images"]["name"]). " has been uploaded.</br>";
+		//$command = "main.cpp"
+		//$output;
+		//$result;
+		//echo $command;
+		//string exec($command,$output);
+    } else {
+        echo "Sorry, there was an error uploading your file.";
+    }
+
 }
 
 echo '<!DOCTYPE html>
