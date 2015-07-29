@@ -54,6 +54,8 @@ li, dd {
 img {
     border: none;
 	vertical-align: middle;
+	width:304px;
+	height:228px;
 }
 
 /* Basic element styles */

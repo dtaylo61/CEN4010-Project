@@ -8,10 +8,31 @@
 
     <body>
 		<div class ="container" id="input">
+		<section class="header">
+		<center><h1>Change Counter</h1></center>
+		<h2> About</h2>
+		<p>
+		
+		</p>
+		<h2>Directions</h2>
+		<ol>
+		<li>Seperate Coins by type (ie. Penny, Dimes, Nickel, Quarter)</li>
+		<li>Spread Coins on even flat service with a clear background (ex On a white sheet of paper)</li>
+		<li>Take picture of the coins (If on mobile you can hit Choose File to take the picture)</li>
+		<li>Click choose file and select the file (If on mobile this was done in the previous step	)</li>
+		<li>Select what type of coins are in the picture</li>
+		<li>Click the submit button</li>
+		</ol>
+
+		</section>
 		<section class="main-content">
-		<h1> Upload Image</h1>
+		<h2> Upload Image</h2>
 		<form method="post" enctype="multipart/form-data" action="Program.php">
 		<input type="file" name="images" id="images" /></br>
+		<input type="radio" name="type" value=0>Penny</br>
+		<input type="radio" name="type" value=1>Dime</br>
+		<input type="radio" name="type" value=2>Nickel </br>
+		<input type="radio" name="type" value=3>Quarter</br>
 		<input type="submit" value="Upload Image" name="Submit">
 		</form>
 		</section>
